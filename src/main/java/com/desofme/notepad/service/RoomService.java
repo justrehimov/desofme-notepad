@@ -21,7 +21,8 @@ public class RoomService {
     private RoomRepo roomRepo;
 
     public Room generateRoom() {
-        var uid = UUID.randomUUID().toString();
+  
+        var uid = UUID.randomUUID().toString().substring(0, 6);
         Room room = new Room();
         room.setRoomId(uid);
         room.setUpdatedAt(new Date());
